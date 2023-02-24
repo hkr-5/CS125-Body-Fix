@@ -11,113 +11,45 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-col>
+    <ion-img style="width: 20%;" src="https://docs-demo.ionic.io/assets/madison.jpg" alt="The Wisconsin State Capitol building in Madison, WI at night" ></ion-img>
+ 
+  </ion-col>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-content>
 
+<ion-header>
+    <ion-searchbar></ion-searchbar>
+    <ion-button (click)="presentAlert()">Distance</ion-button>
+    <ion-button (click)="presentPrice()">Price
+      <ion-icon slot="start" name="logo-usd"></ion-icon>
+    </ion-button>
+    <ion-button (click)="presentStar()">Star
+      <ion-icon slot="end" name="star"></ion-icon>
+    </ion-button>
+</ion-header>
 
-<div>
-  <!-- <img src=“assets/img/Broccoli.jpg”> -->
-  <ion-searchbar></ion-searchbar>
-</div>
+<ion-list style="width: 20%;">
+  <ion-item>
+    <ion-label>Dishes: </ion-label>
+    <ion-badge color="primary"></ion-badge>
+  </ion-item>
+  <ion-item>
+    <ion-label>Restuarant Name: </ion-label>
+    <ion-badge color="secondary"></ion-badge>
+  </ion-item>
+  <ion-item>
+    <ion-label>Location: </ion-label>
+    <ion-badge color="tertiary"></ion-badge>
+  </ion-item>
+  <ion-item>
+    <ion-label>Calorie: </ion-label>
+    <ion-badge color="success"></ion-badge>
+  </ion-item>
+  <ion-item>
+    <ion-label>Contant: </ion-label>
+    <ion-badge color="warning"></ion-badge>
+  </ion-item>
 
-<div>
-  <ion-card color="primary">
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Card Content
-    </ion-card-content>
-  </ion-card>
-  
-  <ion-card color="secondary">
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Card Content
-    </ion-card-content>
-  </ion-card>
-  
-  <ion-card color="tertiary">
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Card Content
-    </ion-card-content>
-  </ion-card>
-  
-  <ion-card color="success">
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Card Content
-    </ion-card-content>
-  </ion-card>
-  
-  <ion-card color="warning">
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Card Content
-    </ion-card-content>
-  </ion-card>
-  
-  <ion-card color="danger">
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Card Content
-    </ion-card-content>
-  </ion-card>
-  
-  <ion-card color="light">
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Card Content
-    </ion-card-content>
-  </ion-card>
-  
-  <ion-card color="medium">
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Card Content
-    </ion-card-content>
-  </ion-card>
-  
-  <ion-card color="dark">
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Card Content
-    </ion-card-content>
-  </ion-card>
-</div>
+</ion-list>
+
