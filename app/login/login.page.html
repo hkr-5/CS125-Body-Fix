@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Home </ion-title>
+    <ion-title> Account Login </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,14 +18,18 @@
     </div>
   </div>
 
-  <div id="infoField">
-    <h1>Your Account Info</h1>
-    <h2>Name:</h2>
-    <h2>You Goal:</h2>
-  </div>
-
-  <div id="loginPage">
+  <div id="loginField">
+    <h1>Log in</h1>
+    <ion-item>
+      <ion-label>User ID</ion-label>
+      <ion-input placeholder="Enter your user ID"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input placeholder="Enter your password"></ion-input>
+    </ion-item>
+    <ion-button (click)="presentAlert()">Log in</ion-button>
     <p>Need to sign up? Click <a href="./signup">here</a></p>
-    <p>Already have an account? Click <a href="./login">here</a> to log in</p>    
+    <p>Go back to home page: <a href="./tabs/tab1">here</a></p>
   </div>
 </ion-content>

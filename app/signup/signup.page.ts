@@ -2,20 +2,22 @@ import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: 'app-signup',
+  templateUrl: './signup.page.html',
+  styleUrls: ['./signup.page.scss'],
 })
-export class Tab1Page {
+export class SignupPage {
   constructor(private alertController: AlertController) {}
 
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Yay!',
-      message: 'You are logged in',
+      message: 'Your account has been created',
       buttons: ['OK'],
     });
 
     await alert.present();
   }
 }
+
+
