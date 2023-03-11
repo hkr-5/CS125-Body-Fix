@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import axios from 'axios';
+
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss']
 })
+
 export class Tab3Page {
   
-
+  people="10"
+  
   constructor(private alertController: AlertController) {}
   async presentAlert() {
     const distance = await this.alertController.create({
@@ -83,4 +87,53 @@ export class Tab3Page {
     await star.present();
   }
   
+  // getFile(){
+  //   const options = {
+  //   method: 'GET',
+  //   headers: {
+  //     accept: 'application/json',
+  //     Authorization: 'Bearer ANqL8DWNmjbGyOciXVpmjB6x3hLHLW8EyzUS8z5hSZSSHjS2E7vzhlJsXQYVqiSfSQJzfW3ZeFP5SCV-jggrnLwP7xkrX47lHHn1lGEK9OdEYNKIT7_ujom13aYKZHYx',
+  //     'Access-Control-Allow-Origin': 'https://localhost:8100'
+  //   }
+  //     };
+  //     fetch('https://api.yelp.com/v3/businesses/search?location=irvine&term=innout&sort_by=best_match&limit=20', options)
+  //       .then(response => response.json())
+  //       .then(response => console.log(response))
+  //       .catch(err => console.error(err));
+  // }
+
+ 
+
+
+
+  getFile(){
+    const url = 'https://api.yelp.com/v3/businesses/search';
+
+// Set up the request parameters, such as the search term and location
+const params = {
+  term: 'pizza',
+  location: 'San Francisco',
+};
+
+// Set up the request headers, including the API key and the CORS header
+const headers = {
+  Authorization: `Bearer ANqL8DWNmjbGyOciXVpmjB6x3hLHLW8EyzUS8z5hSZSSHjS2E7vzhlJsXQYVqiSfSQJzfW3ZeFP5SCV-jggrnLwP7xkrX47lHHn1lGEK9OdEYNKIT7_ujom13aYKZHYx`,
+  'Access-Control-Allow-Origin': '*',
+};
+
+// Send the API request and get the response
+axios
+  .get(url, { headers, params })
+  .then((response) => {
+    // Handle the response data
+    console.log(response.data);
+  })
+  .catch((error) => {
+    // Handle any errors
+    console.error(error);
+  });
+  }
+
+
+
 }
