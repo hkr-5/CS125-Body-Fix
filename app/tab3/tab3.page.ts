@@ -2,20 +2,6 @@ import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import axios from 'axios';
 
-const API_KEY = "ANqL8DWNmjbGyOciXVpmjB6x3hLHLW8EyzUS8z5hSZSSHjS2E7vzhlJsXQYVqiSfSQJzfW3ZeFP5SCV-jggrnLwP7xkrX47lHHn1lGEK9OdEYNKIT7_ujom13aYKZHYx";
-
-const BASE_URL = "https://api.yelp.com/v3";
-
-const SEARCH_ENDPOINT = "/businesses/search";
-
-const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-
-interface YelpBusiness {
-  name: string;
-  rating: number;
-  phone: string;
-}
-
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
