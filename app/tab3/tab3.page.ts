@@ -108,20 +108,14 @@ export class Tab3Page {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer ANqL8DWNmjbGyOciXVpmjB6x3hLHLW8EyzUS8z5hSZSSHjS2E7vzhlJsXQYVqiSfSQJzfW3ZeFP5SCV-jggrnLwP7xkrX47lHHn1lGEK9OdEYNKIT7_ujom13aYKZHYx',
+      Authorization: 'Bearer 5icQU-p04RYAvXO0IENLAB2UnnN7DbuRVHtvGYhNWmi0gklKJVeoPG0-Ze1pnAUpSKYXkgANkZn34Uek_kgfZ-3XjNEZI7rY4B3xP88YrDqrzTibfqQaK23nkekMZHYx',
     }
       };
       fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=irvine&term=innout&sort_by=best_match&limit=20', options)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.error(err));
-        
   }
-
-
- 
-
-
 
 //   getFile(){
 //     const url = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search';
@@ -151,26 +145,6 @@ export class Tab3Page {
 //     console.error(error);
 //   });
 //   }
-
-
-async searchBusinesses(term: 'innout',location: 'irvine'): Promise<YelpBusiness[]> {
-  const response = await axios.get(`${CORS_PROXY}${BASE_URL}${SEARCH_ENDPOINT}`, {
-    headers: {
-      Authorization: `Bearer ${API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    params: {
-      term,
-      location,
-    },
-  });
-  return response.data.businesses.map((business: any) => ({
-    name: business.name,
-    rating: business.rating,
-    phone: business.phone,
-  }));
-}
-
 
 
 }
