@@ -1,105 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Search
-    </ion-title>
+    <ion-searchbar [(ngModel)]="searchItem"></ion-searchbar>
   </ion-toolbar>
+
+  <ion-button (click)="presentPrice()">Price
+    <ion-icon slot="start" name="logo-usd"></ion-icon>
+  </ion-button>
+  <ion-button (click)="presentStar()">Star
+    <ion-icon slot="end" name="star"></ion-icon>
+  </ion-button>
+  <ion-button (click)="presentAlert()">Distance</ion-button>
+  <ion-button (click)="getFile(searchItem)">Search</ion-button>
 </ion-header>
 
-<ion-row class="ion-justify-content-center" >
 
-  <ion-col class="ion-justify-content-center">
-    <ion-img style="width: 50%;" src="assets/img/california-roll.jpg" class="center" alt="Restaurant pic" ></ion-img>
-    <ion-list style="width: 50%;" class="center">
-      <ion-item>
-        <ion-label>Dishes: </ion-label>
-        <ion-badge color="primary"></ion-badge>
-      </ion-item>
-      <ion-item>
-        <ion-label>Restaurant Name: </ion-label>
-        <ion-badge color="secondary"></ion-badge>
-      </ion-item>
-      <ion-item>
-        <ion-label>Location: </ion-label>
-        <ion-badge color="tertiary"></ion-badge>
-      </ion-item>
-      <ion-item>
-        <ion-label>Calorie: </ion-label>
-        <ion-badge color="success"></ion-badge>
-      </ion-item>
-      <ion-item>
-        <ion-label>Contant: </ion-label>
-        <ion-badge color="warning"></ion-badge>
-      </ion-item>
-    </ion-list>
-  </ion-col>
-
-  <ion-col>
-    <ion-img style="width: 50%;" src="assets/img/Broccoli.jpg" class="center" alt="Restaurant pic" ></ion-img>
-    <ion-list style="width: 50%;" class="center">
-      <ion-item>
-        <ion-label>Dishes: </ion-label>
-        <ion-badge color="primary"></ion-badge>
-      </ion-item>
-      <ion-item>
-        <ion-label>Restaurant Name: </ion-label>
-        <ion-badge color="secondary"></ion-badge>
-      </ion-item>
-      <ion-item>
-        <ion-label>Location: </ion-label>
-        <ion-badge color="tertiary"></ion-badge>
-      </ion-item>
-      <ion-item>
-        <ion-label>Calorie: </ion-label>
-        <ion-badge color="success"></ion-badge>
-      </ion-item>
-      <ion-item>
-        <ion-label>Contant: </ion-label>
-        <ion-badge color="warning"></ion-badge>
-      </ion-item>
-    </ion-list>
-  </ion-col>
-
-  <ion-col>
-    <ion-img style="width: 50%;" src="assets/img/salad.jpg" class="center" alt="Restaurant pic" ></ion-img>
-    <ion-list style="width: 50%;" class="center">
-      <ion-item>
-        <ion-label>Dishes: </ion-label>
-        <ion-badge color="primary"></ion-badge>
-      </ion-item>
-      <ion-item>
-        <ion-label>Restaurant Name: </ion-label>
-        <ion-badge color="secondary"></ion-badge>
-      </ion-item>
-      <ion-item>
-        <ion-label>Location: </ion-label>
-        <ion-badge color="tertiary"></ion-badge>
-      </ion-item>
-      <ion-item>
-        <ion-label>Calorie: </ion-label>
-        <ion-badge color="success"></ion-badge>
-      </ion-item>
-      <ion-item>
-        <ion-label>Contant: </ion-label>
-        <ion-badge color="warning"></ion-badge>
-      </ion-item>
-    </ion-list>
-  </ion-col>
-
-</ion-row>
-
-<ion-header>
-    <ion-searchbar></ion-searchbar>
-    <ion-button (click)="presentAlert()">Distance</ion-button>
-    <ion-button (click)="presentPrice()">Price
-      <ion-icon slot="start" name="logo-usd"></ion-icon>
-    </ion-button>
-    <ion-button (click)="presentStar()">Star
-      <ion-icon slot="end" name="star"></ion-icon>
-    </ion-button>
-</ion-header>
-
-<ion-button expand="block" (click)="getFile()">Default</ion-button>
 
 
 
