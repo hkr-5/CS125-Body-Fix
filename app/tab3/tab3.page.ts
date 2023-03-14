@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-import axios from 'axios';
 
 @Component({
   selector: 'app-tab3',
@@ -11,8 +10,6 @@ import axios from 'axios';
 
 
 export class Tab3Page {
-  
-  people="10"
   
   constructor(private alertController: AlertController) {}
   async presentAlert() {
