@@ -7,8 +7,6 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['tab3.page.scss']
 })
 
-
-
 export class Tab3Page {
   
   constructor(private alertController: AlertController) {}
