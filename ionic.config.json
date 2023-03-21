@@ -1,0 +1,7 @@
+{
+  "name": "BodyFix",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
