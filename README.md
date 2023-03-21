@@ -2,11 +2,11 @@
 Project for CS125 Next Search Generation Winter 2023
 
 Group 10 MidKnight Programmer
-Coder: 
+Coder:
 Zhongri Jin; 89464957; zhongrij@uci.edu
 Yamamoto, Hikaru; 69645506; yamamoh1@uci.edu
-Li, Xinlin; 86098175; xilinl3@uci.edu
-Chen, Lingchong; 90235931; lingchoc@uci.edu
+Xinlin Li; 86098175; xilinl3@uci.edu
+Lingchong Chen; 90235931; lingchoc@uci.edu
 
 This application is created with Ionic in Angular Framework.
 In order to run the application, you might need to install npm, Angular, and any other necessary things. 
