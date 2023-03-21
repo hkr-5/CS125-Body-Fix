@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { Chart } from 'chart.js/auto';
 import { UserService } from '../services/user.service';
 import 'chartjs-adapter-date-fns';
@@ -10,7 +10,7 @@ import { enUS } from 'date-fns/locale';
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss'],
 })
-export class Tab2Page implements AfterViewInit {
+export class Tab2Page implements OnInit {
   @ViewChild('lineCanvas') private lineCanvas: ElementRef;
 
   lineChart: any;
@@ -33,11 +33,15 @@ export class Tab2Page implements AfterViewInit {
     this.lineChart.update();
   }
 
-  ngAfterViewInit() {
+  ionViewDidEnter() {
     this.lineChartMethod();
   }
 
   lineChartMethod() {
+    if(this.lineChart!=null){
+      this.lineChart.clear();
+      this.lineChart.destroy();
+    }
     const data = Object.values(UserService.user.logs)
       .sort((a, b) => a.timestamp - b.timestamp)
       .map(({ timestamp, weight }) => ({
@@ -57,6 +61,8 @@ export class Tab2Page implements AfterViewInit {
         ],
       },
       options: {
+        maintainAspectRatio: false,
+        responsive: true,
         scales: {
           x: {
             type: 'time',

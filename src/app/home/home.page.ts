@@ -45,7 +45,7 @@ export class HomePage {
     const progress = start - current;
     const percentage = Math.round((progress / range) * 100);
 
-    console.log('start', start, 'current', current, 'goal', goal);
+    //console.log('start', start, 'current', current, 'goal', goal);
     return Math.max(percentage, 0);
   }
 
