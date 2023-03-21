@@ -1,0 +1,57 @@
+h1 {
+    font-weight: bold;
+}
+
+#signupField {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#goal {
+    padding: 2%;
+}
+
+#logo {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-left: 60%;
+    margin-top: 2%;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #59ccf2;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    margin-left: 60%;
+    margin-top: 2%;
+    border-radius: 8px;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.container:hover .overlay {
+    width: 80%;
+}
+  
+.text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 70%;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
