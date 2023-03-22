@@ -76,7 +76,6 @@ export class UserFormComponent implements OnInit {
       Boolean(this.lastName) &&
       Boolean(this.age) &&
       Boolean(this.feet) &&
-      Boolean(this.inches) &&
       Boolean(this.weight) &&
       Boolean(this.goal)
     );
