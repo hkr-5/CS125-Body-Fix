@@ -1,0 +1,26 @@
+<ion-item lines="none">
+  <ion-thumbnail slot="start">
+    <a [href]="restaurant?.url"><img [src]="restaurant?.image_url ? restaurant.image_url : 'assets/imgs/chicken.png'" /></a>
+  </ion-thumbnail>
+  <ion-label>
+    <h4>{{restaurant?.name}}</h4>
+    <ion-text color="medium">
+      <p class="pStyle">
+        {{getAddress(restaurant?.location.display_address)}}
+      </p>
+    </ion-text>
+    
+     <p>{{restaurant?.display_phone}} </p>
+     <p>{{restaurant?.price}}</p>
+     <p>{{restaurant?.review_count}} reviews</p>
+     <span>
+      <ion-icon name="star"></ion-icon>
+      {{restaurant?.rating}}
+    </span>
+    <ion-text color="danger" *ngIf="restaurant?.distance && restaurant?.distance != 0">
+      <p class="distance">
+        {{restaurant?.distance * 0.0006| number: '0.0-2'}} miles away
+      </p>
+    </ion-text>
+  </ion-label>
+</ion-item>
