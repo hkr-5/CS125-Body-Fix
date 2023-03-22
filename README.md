@@ -20,7 +20,7 @@ Instruction:
 4. Run "ionic serve" (It might take some time to start the server)
 5. Since free versions of API only allows temporaty access, the application might encounter "No Access-Control-Allow-Origin" problem. 
 In order to solve this issue, we added https://cors-anywhere.herokuapp.com/ in front of our API URL. 
-We can access API, however, it is only temporary access. Thus, we have to go to https://cors-anywhere.herokuapp.com/corsdemo website to request temporary access after a while.
+We can access API, however, it is only temporary access. Thus, users have to go to https://cors-anywhere.herokuapp.com/corsdemo and click the button "Request temporary access to the demo server" to request temporary access.
 
 Please let us know if there are any issues running the code. Thank you.
 Email: yamamoh1@uci.edu
