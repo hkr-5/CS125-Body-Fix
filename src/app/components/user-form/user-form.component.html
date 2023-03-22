@@ -1,0 +1,74 @@
+<div class="logo-container">
+  <img src="../assets/icon/logo.png" alt="Logo Image" id="logo" />
+</div>
+
+<div class="content">
+  <ion-text><h3>Welcome to BodyFix!</h3></ion-text>
+  <ion-text>
+    <p>We'll need some information before you can start your journey</p>
+  </ion-text>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input
+        [(ngModel)]="firstName"
+        placeholder="first"
+        (ionChange)="handleFirstName($event)"
+      ></ion-input>
+      <ion-input
+        [(ngModel)]="lastName"
+        placeholder="last"
+        (ionChange)="handleLastName($event)"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Age</ion-label>
+      <ion-input
+        [(ngModel)]="age"
+        type="number"
+        (ionChange)="handleAge($event)"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Height</ion-label>
+      <ion-input
+        [(ngModel)]="feet"
+        type="number"
+        placeholder="ft"
+        (ionChange)="handleFeet($event)"
+      ></ion-input>
+      <ion-input
+        [(ngModel)]="inches"
+        type="number"
+        placeholder="in"
+        (ionChange)="handleInches($event)"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Current Weight</ion-label>
+      <ion-input
+        [(ngModel)]="weight"
+        type="number"
+        placeholder="lb"
+        (ionChange)="handleWeight($event)"
+      ></ion-input>
+      <ion-label>Goal</ion-label>
+      <ion-input
+        [(ngModel)]="goal"
+        type="number"
+        placeholder="lb"
+        (ionChange)="handleGoal($event)"
+      ></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button
+    expand="block"
+    class="button"
+    [disabled]="!isEnabled"
+    (click)="handleUserCreation()"
+  >
+    Get Started!
+  </ion-button>
+</div>
